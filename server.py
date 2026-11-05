@@ -14,7 +14,7 @@ from urllib.parse import urlparse, parse_qs
 BASE = os.path.dirname(os.path.abspath(__file__))
 DB_PATH = os.path.join(BASE, "nova.db")
 STATIC = os.path.join(BASE, "static")
-PORT = 8000
+PORT = int(os.environ.get("PORT", 8000))
 
 PRODUCTS = [
     # name, category, price, original_price, rating, stock, emoji, colors, sizes, description, sold
@@ -362,4 +362,4 @@ if __name__ == "__main__":
     init_db()
     print(f"NOVA.STORE is running:  http://localhost:{PORT}")
     print("Press Ctrl+C to stop.")
-    ThreadingHTTPServer(("127.0.0.1", PORT), Handler).serve_forever()
+    ThreadingHTTPServer(("0.0.0.0", PORT), Handler).serve_forever()
