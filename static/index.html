@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NOVA.STORE — Premium Online Shopping</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <div class="nav wrap">
+    <div class="logo" onclick="showView('home')">NOVA<span>.STORE</span></div>
+    <div class="search"><input id="searchInput" type="text" placeholder="Search products..." oninput="onSearch(this.value)"></div>
+    <nav>
+      <a onclick="showView('home')">Home</a>
+      <a onclick="showView('shop')">Shop</a>
+      <a onclick="showView('shop');setCategory('')">Categories</a>
+      <a onclick="showView('about')">About Us</a>
+      <a onclick="showView('contact')">Contact</a>
+    </nav>
+    <div class="icons">
+      <button class="icon-btn" title="Wishlist" onclick="showView('wishlist')">❤️ <b id="wishCount">0</b></button>
+      <button class="icon-btn" title="Cart" onclick="showView('cart')">🛒 <b id="cartCount">0</b></button>
+      <button class="icon-btn" title="Account" onclick="showView('account')">👤</button>
+      <button class="icon-btn" title="Admin" onclick="showView('admin')">⚙️</button>
+    </div>
+  </div>
+</header>
+<main class="wrap">
+  <div id="toast"></div>
+  <section id="view-home"></section>
+  <section id="view-shop" class="hidden"></section>
+  <section id="view-product" class="hidden"></section>
+  <section id="view-cart" class="hidden"></section>
+  <section id="view-checkout" class="hidden"></section>
+  <section id="view-wishlist" class="hidden"></section>
+  <section id="view-account" class="hidden"></section>
+  <section id="view-admin" class="hidden"></section>
+  <section id="view-about" class="hidden"></section>
+  <section id="view-contact" class="hidden"></section>
+</main>
+<footer>
+  <div class="wrap foot">
+    <div><h4>NOVA.STORE</h4><p>Premium products, honest prices, fast delivery.</p></div>
+    <div><h4>Shop</h4><p>Electronics<br>Fashion<br>Home &amp; Living<br>Beauty</p></div>
+    <div><h4>Help</h4><p>About Us<br>Contact<br>Order History<br>Wishlist</p></div>
+    <div><h4>Follow</h4><p>📘 Facebook &nbsp; 📸 Instagram &nbsp; 🐦 Twitter &nbsp; ▶️ YouTube</p></div>
+  </div>
+  <p class="copy">© 2026 NOVA.STORE — Localhost demo version. Checkout is a demo: no real payment is taken.</p>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>
