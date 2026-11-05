@@ -1,5 +1,8 @@
 # NOVA.STORE — Localhost Version
 
+**Live Demo:** [https://nova-store-qb1r.onrender.com/](https://nova-store-qb1r.onrender.com/)
+
+
 A complete, downloadable copy of NOVA.STORE that runs on **your own computer**.
 This is a separate local project — it is not the Muse-hosted version, and its
 database starts fresh on your machine.
